@@ -11,6 +11,78 @@ exports.actively_scrolling = function () {
 };
 
 // What, if anything, obscures the home tab?
+exports.home_tab_obscured = function () {
+    if ($('.overlay.show').length > 0) {
+        return 'modal';
+    }
+
+    return false;
+};
+
+exports.change_tab_to = function (tabname) {
+    $('#gear-menu a[href="' + tabname + '"]').tab('show');
+};
+
+exports.focus_on = function (field_id) {
+    // Call after autocompleting on a field, to advance the focus to
+    // the next input field.
+
+    // Bootstrap's typeahead does not expose a callback for when an
+    // autocomplete selection has been made, so we have to do this
+    // manually.
+    $("#" + field_id).focus();
+};
+
+exports.blur_active_element = function () {
+    // this blurs anything that may perhaps be actively focused on.
+    document.activeElement.blur();
+};
+
+function amount_to_paginate() {
+    // Some day we might have separate versions of this function
+    // for Page Up vs. Page Down, but for now it's the same
+    // strategy in either direction.
+    var info = message_viewport.message_viewport_info();
+    var page_size = info.visible_height;
+
+    // We don't want to page up a full page, because Zulip users
+    // are especially worried about missing messages, so we want
+    // a little bit of the old page to stay on the screen.  The
+    // value chosen here is roughly 2 or 3 lines of text, but there
+    // is nothing sacred about it, and somebody more anal than me
+    // might wish to tie this to the size of some particular DOM
+    // element.
+    var overlap_amount = 55;
+
+    var delta = page_size - overlap_amount;
+
+    // If the user has shrunk their browser a whole lot, pagination
+    // is not going to be very pleasant, but we can at least
+    // ensure they go in the right direction.
+    if (delta < 1) {
+        delta = 1;
+    }
+
+    return delta;
+}
+
+exports.page_up_the_right_amount = function () {
+    // This function's job is to scroll up the right amount,
+    // after the user hits Page Up.  We do this ourselves
+    // because we can't rely on the browser to account for certain
+    // page elements, like the compose box, that sit in fixed
+    // positions above the message pane.  For other scrolling
+    // related adjustements, try to make those happen in the
+    // scroll handlers, not here.
+    var delta = amount_to_paginate();
+    message_viewport.scrollTop(message_viewport.scrollTop() - delta);
+};
+
+exports.page_down_the_right_amount = function () {
+    // see also: page_up_the_right_amount
+    var delta = amount_to_paginate();
+    message_viewport.scrollTop(message_viewport.scrollTop() + delta);
+};
 
 exports.replace_emoji_with_text = function (element) {
     element.find(".emoji").replaceWith(function () {
