@@ -1,0 +1,43 @@
+body {
+    background-color: #D5E4E9;
+}
+
+.row-fluid {
+    text-align: center;
+}
+
+.errorbox {
+    margin: auto;
+    border: 2px solid #44A98C;
+    max-width: 500px;
+    text-align: center;
+    background-color: white;
+}
+
+.errorname {
+    color: white;
+    background-color: #44A98C;
+    padding: 10px;
+    margin: 0px;
+}
+
+.errorcontent {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 0px;
+}
+
+.errorcontent a {
+    background-color: #44A98C;
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    max-width: 500px;
+    margin-bottom: -5px;
+}
+
