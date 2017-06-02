@@ -583,7 +583,7 @@ td.pointer {
 .message_time {
     display: block;
     font-size: 12px;
-    color: #b1b1b1;
+    color: #595959;
     vertical-align: middle;
     padding: 1px;
     font-weight: 400;
@@ -760,7 +760,7 @@ td.pointer {
     right: 0;
     top: 0;
 
-    color: #888;
+    color: #525252;
     font-size: 12px;
     font-weight: 600;
     padding: 3px 11px 2px 10px;
@@ -1809,7 +1809,7 @@ nav .column-left .company-name {
     margin-left: 8px;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #52c2af;
+    color: #007d56;
     letter-spacing: 0.1em;
     cursor: pointer;
 }
