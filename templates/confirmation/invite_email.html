@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Zulip</title>
+        <link href="emails.css" rel="stylesheet">
+    </head>
+    <body class="">
+        <table border="0" cellpadding="0" cellspacing="0" class="body">
+            <tr>
+                <td>&nbsp;</td>
+                <td class="container">
+                    <div class="content">
+                        <div class="graphic-wrapper">
+                            <img src="images/registration_confirmation.svg"/>
+                        </div>
+                        <!-- START CENTERED WHITE CONTAINER -->
+                        <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+                        <table class="main">
+                            <!-- START MAIN CONTENT AREA -->
+                            <tr>
+                                <td class="wrapper">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <p>Hi there,
+                                                </p>
+                                                <p>
+                                                    {{ referrer.full_name }} ({{ referrer.email }}) wants you to join them on Zulip -- the group communication tool you've always wished you had at work.
+                                                </p>
+                                                {% if custom_body %}
+                                                <p>Message from {{ referrer.full_name }}: {{ custom_body }}</p>
+                                                {% endif %}
+                                                <p>
+                                                    To get started, visit the link below:
+                                                    <br />
+                                                    <a href="{{ activate_url }}" style="color:#08c">{{ activate_url }}</a>
+                                                </p>
+                                                <p>
+                                                {% if verbose_support_offers %}
+                                                    Feel free to give us a shout at <a href="mailto:{{ support_email }}" style="color:#08c">{{ support_email }}</a>, if you have any questions.
+                                                {% else %}
+                                                    If you are having issues, please contact your Zulip administrator at <a href="mailto:{{ support_email }}" style="color:#08c">{{ support_email }}</a>.
+                                                {% endif %}
+                                                </p>
+                                                <p>
+                                                    Cheers,<br />
+                                                    The Zulip Team
+                                                </p>
+                                                <img src="images/footer.svg"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- END MAIN CONTENT AREA -->
+                        </table>
+                        <!-- START FOOTER -->
+                        <div class="footer">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="content-block">
+                                        <span class="apple-link">Kandra Labs, 112 S Park St, San Francisco CA 94107</span>
+                                        <br> Don't like these emails? <a href="#">Unsubscribe</a>.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- END FOOTER -->
+                        <!-- END CENTERED WHITE CONTAINER -->
+                    </div>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </body>
+</html>
