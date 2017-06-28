@@ -887,6 +887,21 @@ input[type=checkbox].inline-block {
     color: inherit;
 }
 
+#settings_page .table-striped thead tr {
+    display: block;
+}
+
+#settings_page .table-striped th, #settings_page .table-striped td {
+    max-width: 300px;
+}
+
+#settings_page .table-striped tbody {
+    display: block;
+    max-height: 500px;
+    overflow: auto;
+}
+
+
 #settings_page input.search {
     font-size: 0.9rem;
     margin: 0px 0px 20px 0px;
