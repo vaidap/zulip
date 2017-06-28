@@ -357,6 +357,10 @@ input.recipient_box {
     margin-right: 2px;
 }
 
+.high-contrast #send_controls .compose_checkbox_label {
+    color: hsl(0, 0%, 34%);
+}
+
 #send_controls .compose_checkbox_label input {
     position: relative;
     top: -3px;
@@ -387,6 +391,10 @@ input.recipient_box {
     margin-right: 1em;
     margin-left: 5px;
     top: 2px;
+}
+
+.high-contrast .compose_table .drafts-link {
+    color: hsl(200, 100%, 36%);
 }
 
 #sending-indicator {

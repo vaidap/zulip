@@ -191,6 +191,11 @@ li.hidden-filter {
     border-radius: 4px;
 }
 
+.high-contrast #global_filters .count,
+.high-contrast #stream_filters .count {
+    color: hsl(110, 3%, 34%);
+}
+
 #global_filters .count {
     margin-right: 20px;
     margin-top: 2px;

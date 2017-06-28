@@ -697,6 +697,10 @@ input[type=checkbox].inline-block {
     margin-top: 5px;
 }
 
+.high-contrast .edit_bot_form label {
+    color: hsl(0, 0%, 34%);
+}
+
 .edit_bot_form .buttons {
     margin: 10px 0px 5px 0px;
 }
@@ -984,6 +988,10 @@ input[type=checkbox].inline-block {
     cursor: pointer;
 }
 
+.high-contrast #settings_page .settings-header .exit {
+    color: hsl(0, 0%, 46%);
+}
+
 #settings_page .settings-header .exit-sign {
     float: right;
     position: relative;
@@ -1215,4 +1223,12 @@ thead .actions {
 
 #payload_url_inputbox input[type=text] {
     width: 340px;
+}
+
+.high-contrast .modal-body a {
+    color: hsl(200, 100%, 36%);
+}
+
+.high-contrast .modal-footer button {
+    background-color: hsl(201, 100%, 37%);
 }
