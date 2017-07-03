@@ -434,6 +434,8 @@ paths:
 
                        * `enable_stream_sounds`:
 
+                       * `high_contrast_mode`:
+
                        * `left_side_userlist`:
 
                        * `muted_topics`:
@@ -956,6 +958,8 @@ definitions:
       enable_stream_desktop_notifications:
         type: boolean
       enable_stream_sounds:
+        type: boolean
+      high_contrast_mode:
         type: boolean
       left_side_userlist:
         type: boolean

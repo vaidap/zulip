@@ -278,6 +278,10 @@ exports.dispatch_normal_event = function dispatch_normal_event(event) {
                 message_list.narrowed.rerender();
             }
         }
+        if (event.setting_name === 'high_contrast_mode') {
+            // TODO: anything else to update here?
+            page_params.high_contrast_mode = event.setting;
+        }
         if (event.setting_name === 'emoji_alt_code') {
             page_params.emoji_alt_code = event.setting;
             // Rerender the whole message list UI

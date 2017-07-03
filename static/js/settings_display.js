@@ -41,6 +41,30 @@ exports.set_up = function () {
         });
     });
 
+    $("#high_contrast_mode").change(function () {
+    var high_contrast_mode = this.checked;
+    var data = {};
+    data.high_contrast_mode = JSON.stringify(high_contrast_mode);
+    var context = {};
+    if (data.high_contrast_mode === "true") {
+        context.enabled_or_disabled = i18n.t('enabled');
+    } else {
+        context.enabled_or_disabled = i18n.t('disabled');
+    }
+
+    channel.patch({
+        url: '/json/settings/display',
+        data: data,
+        success: function () {
+            ui_report.success(i18n.t("High contrast mode __enabled_or_disabled__!", context),
+                              $('#display-settings-status').expectOne());
+        },
+        error: function (xhr) {
+            ui_report.error(i18n.t("Error updating high contrast setting"), xhr, $('#display-settings-status').expectOne());
+        },
+    });
+});
+
     $('#default_language').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -158,6 +182,7 @@ exports.set_up = function () {
 
 function _update_page() {
     $("#twenty_four_hour_time").prop('checked', page_params.twenty_four_hour_time);
+    $("#high_contrast_mode").prop('checked', page_params.high_contrast_mode);
     $("#left_side_userlist").prop('checked', page_params.left_side_userlist);
     $("#emoji_alt_code").prop('checked', page_params.emoji_alt_code);
     $("#default_language_name").text(page_params.default_language_name);

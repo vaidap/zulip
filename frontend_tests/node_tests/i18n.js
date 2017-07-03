@@ -49,6 +49,7 @@ i18n.init({
             avatar_url: "http://example.com",
             left_side_userlist: false,
             twenty_four_hour_time: false,
+            high_contrast_mode: false,
             enable_stream_desktop_notifications: false,
             enable_stream_sounds: false,
             enable_desktop_notifications: false,

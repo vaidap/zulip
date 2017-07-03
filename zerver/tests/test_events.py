@@ -1022,6 +1022,7 @@ class EventsRegisterTest(ZulipTestCase):
         bool_change = [True, False, True]  # type: List[bool]
         test_changes = dict(
             twenty_four_hour_time = bool_change,
+            high_contrast_mode = bool_change,
             left_side_userlist = bool_change,
             emoji_alt_code = bool_change,
             emojiset = [u'apple', u'twitter'],

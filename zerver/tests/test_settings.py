@@ -156,6 +156,8 @@ class ChangeSettingsTest(ZulipTestCase):
         # type: () -> None
         self.check_for_toggle_param('/json/users/me/enter-sends', "enter_sends")
 
+    # TODO: add a test for high_contrast_mode
+
     def test_mismatching_passwords(self):
         # type: () -> None
         """

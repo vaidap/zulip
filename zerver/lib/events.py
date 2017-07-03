@@ -441,6 +441,8 @@ def apply_event(state, event, user_profile, include_subscribers):
     elif event['type'] == "update_display_settings":
         if event['setting_name'] == "twenty_four_hour_time":
             state['twenty_four_hour_time'] = event["setting"]
+        if event['setting_name'] == "high_contrast_mode":
+            state['high_contrast_mode'] = event["setting"]
         if event['setting_name'] == 'left_side_userlist':
             state['left_side_userlist'] = event["setting"]
         if event['setting_name'] == 'emoji_alt_code':
