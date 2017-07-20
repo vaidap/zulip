@@ -94,7 +94,7 @@ NOREPLY_EMAIL_ADDRESS = "noreply@" + EXTERNAL_HOST.split(":")[0]
 AUTHENTICATION_BACKENDS = (
     'zproject.backends.EmailAuthBackend',  # Email and password; just requires SMTP setup
     'zproject.backends.GoogleMobileOauth2Backend',  # Google Apps, setup below
-     'zproject.backends.GitHubAuthBackend',  # GitHub auth, setup below
+    'zproject.backends.GitHubAuthBackend',  # GitHub auth, setup below
     # 'zproject.backends.ZulipLDAPAuthBackend',  # LDAP, setup below
     # 'zproject.backends.ZulipRemoteUserBackend',  # Local SSO, setup docs on readthedocs
 )
