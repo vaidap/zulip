@@ -93,7 +93,7 @@ NOREPLY_EMAIL_ADDRESS = "noreply@" + EXTERNAL_HOST.split(":")[0]
 # for documentation on our authentication backends.
 AUTHENTICATION_BACKENDS = (
     'zproject.backends.EmailAuthBackend',  # Email and password; just requires SMTP setup
-    # 'zproject.backends.GoogleMobileOauth2Backend',  # Google Apps, setup below
+    'zproject.backends.GoogleMobileOauth2Backend',  # Google Apps, setup below
      'zproject.backends.GitHubAuthBackend',  # GitHub auth, setup below
     # 'zproject.backends.ZulipLDAPAuthBackend',  # LDAP, setup below
     # 'zproject.backends.ZulipRemoteUserBackend',  # Local SSO, setup docs on readthedocs
@@ -111,7 +111,7 @@ AUTHENTICATION_BACKENDS = (
 #
 # (3) put your client secret as "google_oauth2_client_secret" in
 # zulip-secrets.conf, and your client ID right here:
-# GOOGLE_OAUTH2_CLIENT_ID=<your client ID from Google>
+GOOGLE_OAUTH2_CLIENT_ID = "550366750780-oe3jmgcja216r987ekqifr7hrb7ppc0n.apps.googleusercontent.com"
 
 
 # To enable GitHub authentication, you will need to need to do the following:
