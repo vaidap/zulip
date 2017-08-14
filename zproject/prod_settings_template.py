@@ -123,7 +123,7 @@ AUTHENTICATION_BACKENDS = (
 # (2) Put your "Client ID" as SOCIAL_AUTH_GITHUB_KEY below and your
 # "Client secret" as social_auth_github_secret in
 # /etc/zulip/zulip-secrets.conf.
-# SOCIAL_AUTH_GITHUB_KEY = <your client ID from GitHub>
+SOCIAL_AUTH_GITHUB_KEY = "5a6ddd3c61554d1a19b2"
 #
 # (3) You can also configure the GitHub integration to only allow
 # members of a particular GitHub team or organization to login to your
