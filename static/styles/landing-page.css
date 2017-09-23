@@ -1701,7 +1701,7 @@ nav ul li.active::after {
 
 .portico-landing.apps .other-apps .apps {
     display: inline-block;
-    margin: 50px 0px 0px 0px;
+    margin: 25px 0px 0px 0px;
 }
 
 .portico-landing.apps .other-apps .apps .icon {
